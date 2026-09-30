@@ -1,0 +1,59 @@
+question,expected_source
+What triggers an asthma attack?,medlineplus_asthma
+How is asthma diagnosed?,medlineplus_asthma
+How is high blood pressure treated?,medlineplus_high_blood_pressure
+What are the blood pressure categories?,medlineplus_high_blood_pressure
+What are the warning signs of a stroke?,medlineplus_stroke
+What is the difference between ischemic and hemorrhagic stroke?,medlineplus_stroke
+What foods commonly cause allergies?,medlineplus_foodallergy
+What is anaphylaxis?,medlineplus_foodallergy
+Do antibiotics work for a cold?,medlineplus_commen_cold
+How can I prevent catching a cold?,medlineplus_commen_cold
+What are the symptoms of low blood sugar?,medlineplus_hypoglycemia
+What are the types of diabetes?,medlineplus_diabetes
+How is diabetes diagnosed?,medlineplus_diabetes
+What is the difference between HDL and LDL cholesterol?,medlineplus_cholesterol
+How can I lower my cholesterol?,medlineplus_cholesterol
+What causes COPD?,medlineplus_COPD
+What are the treatments for COPD?,medlineplus_COPD
+What are the symptoms of depression?,medlineplus_depression
+What is persistent depressive disorder?,medlineplus_depression
+What are the types of anxiety disorders?,medlineplus_anxiety
+How is anxiety treated?,medlineplus_anxiety
+What are common causes of anemia?,medlineplus_anemia
+What is a normal body temperature?,medlineplus_fever
+Should children take aspirin for a fever?,medlineplus_fever
+What is hypothyroidism?,medlineplus_thyroid
+What are the symptoms of a urinary tract infection?,medlineplus_urinary_tract_infections
+What are the most common causes of chronic kidney disease?,medlineplus_chronic_kidney_desease
+What is coronary artery disease?,medlineplus_heart_deseases
+What triggers a migraine?,medlineplus_migraine
+What is the capital of France?,NONE
+How do I bake a chocolate cake?,NONE
+Who won the football world cup?,NONE
+How do I build a website?,NONE
+My hands are shaking and I am sweating and I have not eaten,medlineplus_hypoglycemia
+Why do I feel so tired and cold all the time,medlineplus_anemia
+Can smoking cause a lung disease that gets worse over time,medlineplus_COPD
+What is a mini-stroke,medlineplus_stroke
+Which medicines open the airways during an attack,medlineplus_asthma
+What blood pressure reading is dangerously high,medlineplus_high_blood_pressure
+Is it safe to give aspirin to a child with a fever,medlineplus_fever
+What does an inhaler do,medlineplus_asthma
+Which conditions raise the risk of heart disease,medlineplus_heart_deseases
+What is the F.A.S.T. test,medlineplus_stroke
+Can stress raise cholesterol,medlineplus_cholesterol
+What is a panic attack,medlineplus_anxiety
+Which therapy helps seasonal depression,medlineplus_depression
+What is the difference between a food allergy and a food intolerance,medlineplus_foodallergy
+Why do women get more urinary infections than men,medlineplus_urinary_tract_infections
+What does the thyroid gland do,medlineplus_thyroid
+What is gestational diabetes,medlineplus_diabetes
+What is lupus,NONE
+How do I treat a broken arm,NONE
+What are the side effects of ibuprofen,NONE
+How much metformin should I take,NONE
+What is the recommended paracetamol dose for a child,NONE
+What is the treatment for breast cancer,NONE
+Is the COVID vaccine safe,NONE
+How do I lose 10 kg in a month,NONE

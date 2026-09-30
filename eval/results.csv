@@ -1,0 +1,59 @@
+question,type,expected,top_source,top_score,rank,correct
+What triggers an asthma attack?,in_scope,medlineplus_asthma,medlineplus_asthma,0.722,1.0,True
+How is asthma diagnosed?,in_scope,medlineplus_asthma,medlineplus_asthma,0.629,1.0,True
+How is high blood pressure treated?,in_scope,medlineplus_high_blood_pressure,medlineplus_high_blood_pressure,0.54,1.0,True
+What are the blood pressure categories?,in_scope,medlineplus_high_blood_pressure,medlineplus_high_blood_pressure,0.585,1.0,True
+What are the warning signs of a stroke?,in_scope,medlineplus_stroke,medlineplus_stroke,0.719,1.0,True
+What is the difference between ischemic and hemorrhagic stroke?,in_scope,medlineplus_stroke,medlineplus_stroke,0.618,1.0,True
+What foods commonly cause allergies?,in_scope,medlineplus_foodallergy,medlineplus_foodallergy,0.634,1.0,True
+What is anaphylaxis?,in_scope,medlineplus_foodallergy,medlineplus_foodallergy,0.495,1.0,True
+Do antibiotics work for a cold?,in_scope,medlineplus_commen_cold,medlineplus_commen_cold,0.65,1.0,True
+How can I prevent catching a cold?,in_scope,medlineplus_commen_cold,medlineplus_commen_cold,0.751,1.0,True
+What are the symptoms of low blood sugar?,in_scope,medlineplus_hypoglycemia,medlineplus_hypoglycemia,0.652,1.0,True
+What are the types of diabetes?,in_scope,medlineplus_diabetes,medlineplus_diabetes,0.69,1.0,True
+How is diabetes diagnosed?,in_scope,medlineplus_diabetes,medlineplus_diabetes,0.635,1.0,True
+What is the difference between HDL and LDL cholesterol?,in_scope,medlineplus_cholesterol,medlineplus_cholesterol,0.708,1.0,True
+How can I lower my cholesterol?,in_scope,medlineplus_cholesterol,medlineplus_cholesterol,0.696,1.0,True
+What causes COPD?,in_scope,medlineplus_COPD,medlineplus_COPD,0.694,1.0,True
+What are the treatments for COPD?,in_scope,medlineplus_COPD,medlineplus_COPD,0.695,1.0,True
+What are the symptoms of depression?,in_scope,medlineplus_depression,medlineplus_depression,0.687,1.0,True
+What is persistent depressive disorder?,in_scope,medlineplus_depression,medlineplus_depression,0.544,1.0,True
+What are the types of anxiety disorders?,in_scope,medlineplus_anxiety,medlineplus_anxiety,0.711,1.0,True
+How is anxiety treated?,in_scope,medlineplus_anxiety,medlineplus_anxiety,0.743,1.0,True
+What are common causes of anemia?,in_scope,medlineplus_anemia,medlineplus_anemia,0.717,1.0,True
+What is a normal body temperature?,in_scope,medlineplus_fever,medlineplus_fever,0.376,1.0,True
+Should children take aspirin for a fever?,in_scope,medlineplus_fever,medlineplus_fever,0.824,1.0,True
+What is hypothyroidism?,in_scope,medlineplus_thyroid,medlineplus_thyroid,0.47,1.0,True
+What are the symptoms of a urinary tract infection?,in_scope,medlineplus_urinary_tract_infections,medlineplus_urinary_tract_infections,0.64,1.0,True
+What are the most common causes of chronic kidney disease?,in_scope,medlineplus_chronic_kidney_desease,medlineplus_chronic_kidney_desease,0.72,1.0,True
+What is coronary artery disease?,in_scope,medlineplus_heart_deseases,medlineplus_heart_deseases,0.579,1.0,True
+What triggers a migraine?,in_scope,medlineplus_migraine,medlineplus_migraine,0.688,1.0,True
+What is the capital of France?,out_of_scope,NONE,medlineplus_fever,0.1,,True
+How do I bake a chocolate cake?,out_of_scope,NONE,medlineplus_fever,0.128,,True
+Who won the football world cup?,out_of_scope,NONE,medlineplus_depression,0.085,,True
+How do I build a website?,out_of_scope,NONE,medlineplus_diabetes,0.138,,True
+My hands are shaking and I am sweating and I have not eaten,in_scope,medlineplus_hypoglycemia,medlineplus_foodallergy,0.432,2.0,False
+Why do I feel so tired and cold all the time,in_scope,medlineplus_anemia,medlineplus_anemia,0.434,1.0,True
+Can smoking cause a lung disease that gets worse over time,in_scope,medlineplus_COPD,medlineplus_COPD,0.569,1.0,True
+What is a mini-stroke,in_scope,medlineplus_stroke,medlineplus_stroke,0.519,1.0,True
+Which medicines open the airways during an attack,in_scope,medlineplus_asthma,medlineplus_asthma,0.569,1.0,True
+What blood pressure reading is dangerously high,in_scope,medlineplus_high_blood_pressure,medlineplus_high_blood_pressure,0.492,1.0,True
+Is it safe to give aspirin to a child with a fever,in_scope,medlineplus_fever,medlineplus_fever,0.778,1.0,True
+What does an inhaler do,in_scope,medlineplus_asthma,medlineplus_COPD,0.495,2.0,False
+Which conditions raise the risk of heart disease,in_scope,medlineplus_heart_deseases,medlineplus_heart_deseases,0.765,1.0,True
+What is the F.A.S.T. test,in_scope,medlineplus_stroke,medlineplus_asthma,0.269,4.0,False
+Can stress raise cholesterol,in_scope,medlineplus_cholesterol,medlineplus_cholesterol,0.575,1.0,True
+What is a panic attack,in_scope,medlineplus_anxiety,medlineplus_anxiety,0.46,1.0,True
+Which therapy helps seasonal depression,in_scope,medlineplus_depression,medlineplus_depression,0.633,1.0,True
+What is the difference between a food allergy and a food intolerance,in_scope,medlineplus_foodallergy,medlineplus_foodallergy,0.712,1.0,True
+Why do women get more urinary infections than men,in_scope,medlineplus_urinary_tract_infections,medlineplus_urinary_tract_infections,0.624,1.0,True
+What does the thyroid gland do,in_scope,medlineplus_thyroid,medlineplus_thyroid,0.536,1.0,True
+What is gestational diabetes,in_scope,medlineplus_diabetes,medlineplus_diabetes,0.628,1.0,True
+What is lupus,out_of_scope,NONE,medlineplus_chronic_kidney_desease,0.203,,True
+How do I treat a broken arm,out_of_scope,NONE,medlineplus_fever,0.246,,True
+What are the side effects of ibuprofen,out_of_scope,NONE,medlineplus_migraine,0.362,,False
+How much metformin should I take,out_of_scope,NONE,medlineplus_migraine,0.253,,True
+What is the recommended paracetamol dose for a child,out_of_scope,NONE,medlineplus_fever,0.433,,False
+What is the treatment for breast cancer,out_of_scope,NONE,medlineplus_thyroid,0.376,,False
+Is the COVID vaccine safe,out_of_scope,NONE,medlineplus_commen_cold,0.37,,False
+How do I lose 10 kg in a month,out_of_scope,NONE,medlineplus_chronic_kidney_desease,0.359,,False
