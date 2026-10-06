@@ -10,6 +10,15 @@ from google import genai
 from google.genai import errors
 from sentence_transformers import SentenceTransformer
 
+try:
+    from src.safety import (
+        CRISIS_MSG, EMERGENCY_MSG, NO_INFO_MSG, URGENT_HINT, check_safety, is_urgent_wording,
+    )
+except ModuleNotFoundError:
+    from safety import (
+        CRISIS_MSG, EMERGENCY_MSG, NO_INFO_MSG, URGENT_HINT, check_safety, is_urgent_wording,
+    )
+
 logging.getLogger("google_genai").setLevel(logging.ERROR)
 load_dotenv()
 
@@ -18,23 +27,6 @@ INDEX_PATH = "data/processed/faiss.index"
 MODELS = ["gemini-flash-latest", "gemini-flash-lite-latest"]
 TOP_K = 5
 MIN_SCORE = 0.40  # below this, treat the question as not covered by the documents
-
-EMERGENCY_TERMS = [
-    "chest pain", "can't breathe", "cannot breathe", "heart attack right now",
-    "having a stroke", "overdose", "unconscious", "severe bleeding",
-]
-CRISIS_TERMS = ["suicide", "kill myself", "want to die", "end my life", "self-harm", "hurt myself"]
-
-EMERGENCY_MSG = (
-    "This may be a medical emergency. Please call your local emergency number "
-    "or go to the nearest emergency room right away. I can only share general "
-    "information and can't help in an emergency."
-)
-CRISIS_MSG = (
-    "I'm really sorry you're feeling this way. You deserve support from a real person. "
-    "Please contact a local crisis line or emergency service right now, or reach out "
-    "to someone you trust and tell them how you feel."
-)
 
 SYSTEM_PROMPT = """You are Jarvis, a medical information assistant.
 Rules:
@@ -51,7 +43,21 @@ Rules:
 chunks = [json.loads(line) for line in open(CHUNKS_PATH, encoding="utf-8")]
 index = faiss.read_index(INDEX_PATH)
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
+
+def _get_key():
+    key = os.environ.get("GEMINI_API_KEY")
+    if key:
+        return key
+    try:
+        import streamlit as st
+
+        return st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        raise RuntimeError("GEMINI_API_KEY is not set")
+
+
+client = genai.Client(api_key=_get_key())
 
 
 def retrieve(question, k=TOP_K):
@@ -71,22 +77,31 @@ def call_llm(prompt):
     return "The language model is busy right now. Please try again in a few minutes."
 
 
+def _with_hint(text, question):
+    if is_urgent_wording(question):
+        return text + URGENT_HINT
+    return text
+
+
 def answer(question):
-    q = question.lower()
-    if any(t in q for t in CRISIS_TERMS):
+    flag = check_safety(question)
+    if flag == "crisis":
         return CRISIS_MSG, []
-    if any(t in q for t in EMERGENCY_TERMS):
+    if flag == "emergency":
         return EMERGENCY_MSG, []
 
     hits = [(c, s) for c, s in retrieve(question) if s >= MIN_SCORE]
     if not hits:
-        return "I don't have enough information in my documents to answer that.", []
+        return _with_hint(NO_INFO_MSG, question), []
 
     context = "\n\n".join(
         f"[{i + 1}] ({c['source']}) {c['text']}" for i, (c, _) in enumerate(hits)
     )
     prompt = f"{SYSTEM_PROMPT}\n\nContext:\n{context}\n\nQuestion: {question}"
-    return call_llm(prompt), hits
+    text = call_llm(prompt)
+    if text.lower().startswith(("i don't have enough information", "i do not have enough information")):
+        text = _with_hint(text, question)
+    return text, hits
 
 
 def cited_sources(text, hits):
