@@ -203,4 +203,4 @@ Built with Python, PyMuPDF, sentence-transformers, FAISS, Google Gemini, Streaml
 
 ## Author
 
-**Your Name** · [LinkedIn](https://www.linkedin.com/) · [GitHub](https://github.com/aafiyamariam)
+**Aafiya Mariam M** · [LinkedIn](https://www.linkedin.com/in/aafiya-mariam-m) · [GitHub](https://github.com/aafiyamariam)
